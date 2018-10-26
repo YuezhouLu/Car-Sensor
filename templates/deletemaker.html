@@ -2,7 +2,7 @@
 {% block content %}
     <section id = "delete-maker">
         <div class = "delete-maker-title-container">
-            <h1>Do you really Hate {{ deleted_maker.name }} that much??</h1>
+            <h2>Do you really Hate {{ deleted_maker.name }} that much??</h2>
         </div>
         <div class = "delete-form-container">
             <form action = "{{ url_for('deleteMaker', maker_id = deleted_maker.id) }}", method = 'POST'>

@@ -61,15 +61,19 @@
 
 ## Public JSON Endpoints
 #### The following JSON API Endpoints are open to the public:
->* Returns all makers' information in JSON format:  
+* Returns all makers' information in JSON format:  
     ```/garage/JSON```
->* Returns info of all models of a specific maker in JSON format:  
+* Returns info of all models of a specific maker in JSON format:  
     ```/garage/<int:maker_id>/model/JSON```
->* Returns information about a specific model in JSON format:  
+* Returns information about a specific model in JSON format:  
     ```/garage/<int:maker_id>/model/JSON```
 
 
 ## New Updates & Features
+- _**updated on Oct 26, 2018:**_
+    >- Upgraded the web pages to be fully responsive (responsive fonts, logos, photos plus some repositioning features using media queries).
+    >- Better to update all forms to be responsive for the next commit.
+
 - _**updated on Oct 24, 2018:**_
     >- Created this README.md file.
     >- Saved the screenshot of the application.

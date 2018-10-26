@@ -407,7 +407,7 @@ def editMaker(maker_id):
         if request.form['edited_maker_name']:
             editedMaker.name = request.form['edited_maker_name']
         if request.form['edited_maker_logo']:
-            editedMaker.name = request.form['edited_maker_logo']
+            editedMaker.logo = request.form['edited_maker_logo']
         session.add(editedMaker)
         session.commit()
         flash('Maker Edited!', 'maker-related')

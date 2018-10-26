@@ -2,7 +2,7 @@
 {% block content %}
     <section id = "edit-model">
         <div class = "edit-model-title-container">
-            <h1>Edit Model -- {{ edited_model.name }}</h1>
+            <h2>Edit Model -- {{ edited_model.name }}</h2>
         </div>
         <form action = "{{ url_for('editModel', maker_id = maker_id, model_id = model_id) }}", method = 'POST'>
             <div class = "edit-model-rename-container">

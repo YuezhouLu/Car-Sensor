@@ -2,7 +2,7 @@
 {% block content %}
     <section id = "delete-model">
         <div class = "delete-model-title-container">
-            <h1>Not satisfied with {{ deleted_model.name }}???</h1>
+            <h2>Not satisfied with {{ deleted_model.name }}???</h2>
         </div>
         <div class = "delete-form-container">
                 <form action = "{{ url_for('deleteModel', maker_id = maker_id, model_id = model_id) }}", method = 'POST'>
