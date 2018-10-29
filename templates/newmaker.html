@@ -4,17 +4,31 @@
         <div class = "new-maker-title-container">
             <h2>Create A New Maker!</h2>
         </div>
-        <form action = "{{ url_for('newMaker') }}", method = 'POST'>
-            <div class = "new-maker-brand-name-container">
-                <p class = "new-maker-brand-name" >Brand Name:</p>
-                <input type = 'text' size = '20' name = 'maker_name' placeholder= 'A Car Brand'>
-            </div>
-            <div class = "new-maker-maker-logo-container">
-                <p class = "new-maker-maker-logo">Maker Logo:</p>
-                <input type = 'url' maxlength = '250' name = 'maker_logo' placeholder = 'http://www.example.com.jpg'>
-            </div>
-            <input type = 'submit' value = 'Create!'>
-            <a href = "{{ url_for('goHome') }}">Cancel</a>
-        </form>
+        <div class = "form-container">
+            <form action = "{{ url_for('newMaker') }}", method = 'POST'>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "bname" class = "label-name" >Brand Name:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <input type = 'text' id = 'bname' size = '20' name = 'maker_name' placeholder= 'A Car Brand'>
+                    </div>    
+                </div>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "makerlogo" class = "label-name">Maker Logo:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <input type = 'url' id = 'makerlogo' maxlength = '250' name = 'maker_logo' placeholder = 'http://www.example.com.jpg'>
+                    </div>
+                </div>
+                <div class = "form-row">
+                    <a href = "{{ url_for('goHome') }}"><div class = "cancel-button">Cancel</div></a>
+                    <!-- Need to use <a> tag wrap a <div> rather than a <button> here,
+                        otherwise the <button> will trigger the form to be submitted and create an unwanted empty maker. -->
+                    <input type = "submit" value = "Create!">
+                </div>
+            </form>
+        </div>
     </section>
 {% endblock %}

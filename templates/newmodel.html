@@ -4,21 +4,39 @@
         <div class = "new-model-title-container">
             <h2>A New Model</h2>
         </div>
-        <form action = "{{ url_for('newModel', maker_id = maker_id) }}", method = 'POST'>
-            <div class = "new-model-name-container">
-                <p class = "new-model-name">Model Name:</p>
-                <input type = 'text' size = '20' name = 'model_name' placeholder= 'Give it a name'>
-            </div>
-            <div class = "new-model-description-container">
-                <p class = "new-model-description">Model Description:</p>
-                <input type = 'text' size = '50' name = 'model_description' placeholder = 'Say something about this car'>
-            </div>
-            <div class = "new-model-photo-container">
-                <p class = "new-model-photo">Model Photo:</p>
-                <input type = 'url' maxlength = '250' name = 'model_photo' placeholder = 'http://www.example.com'>
-            </div>  
-            <input type = 'submit' value = 'Create'>
-            <a href = "{{ url_for('showModels', maker_id = maker_id) }}">Cancel</a>
-        </form>
+        <div class = "form-container">
+            <form action = "{{ url_for('newModel', maker_id = maker_id) }}", method = 'POST'>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "mname" class = "label-name" >Model Name:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <input type = 'text' id = 'mname' size = '20' name = 'model_name' placeholder= 'Please give this model a name...'>
+                    </div>    
+                </div>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "modeldes" class = "label-name">Model Description:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <textarea id = 'modeldes' name = 'model_description' placeholder = 'Say something about this machine...' style = 'height: 200px'></textarea>
+                    </div>
+                </div>
+                <div class = "form-row">
+                        <div class = "form-col-25">
+                            <label for = "mphoto" class = "label-name">Model Photo:</label>
+                        </div>
+                        <div class = "form-col-75">
+                            <input type = 'url' id = 'mphoto' maxlength = '250' name = 'model_photo' placeholder = 'http://www.example.com.jpg'>
+                        </div>
+                    </div>
+                <div class = "form-row">
+                    <a href = "{{ url_for('showModels', maker_id = maker_id) }}"><div class = "cancel-button">Cancel</div></a>
+                    <!-- Need to use <a> tag wrap a <div> rather than a <button> here,
+                        otherwise the <button> will trigger the form to be submitted and create an unwanted empty maker. -->
+                    <input type = "submit" value = "Create!">
+                </div>
+            </form>
+        </div>
     </section>
 {% endblock %}

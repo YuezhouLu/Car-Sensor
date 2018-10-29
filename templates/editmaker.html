@@ -4,17 +4,31 @@
         <div class = "edit-maker-title-container">
             <h2>Edit Maker -- {{ edited_maker.name }}</h2>
         </div>
-        <form action = "{{ url_for('editMaker', maker_id = edited_maker.id) }}", method = 'POST'>
-            <div class = "edit-maker-rename-brand-container">
-                <p class = "edit-maker-rename-brand">Rename Brand:</p>
-                <input type = 'text' size = '20' name = 'edited_maker_name' placeholder= '{{ edited_maker.name }}'>
-            </div>
-            <div class = "edit-maker-rebuild-logo-container">
-                <p class = "edit-maker-rebuild-logo">Rebuild Logo:</p>
-                <input type = 'url' maxlength = '250' name = 'edited_maker_logo' placeholder = 'http://www.example.com.jpg'>
-            </div>
-            <input type = 'submit' value = 'Edit'>
-            <a href = "{{ url_for('goHome') }}">Cancel</a>
-        </form>
+        <div class = "form-container">
+            <form action = "{{ url_for('editMaker', maker_id = edited_maker.id) }}", method = 'POST'>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "rename" class = "label-name">Rename Brand:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <input type = 'text' id = 'rename' size = '20' name = 'edited_maker_name' placeholder= '{{ edited_maker.name }}'>
+                    </div>    
+                </div>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "edlogo" class = "label-name">Rebuild Logo:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <input type = 'url' id = 'edlogo' maxlength = '250' name = 'edited_maker_logo' placeholder = 'http://www.example.com.jpg'>
+                    </div>
+                </div>
+                <div class = "form-row">
+                    <a href = "{{ url_for('goHome') }}"><div class = "cancel-button">Cancel</div></a>
+                    <!-- Need to use <a> tag wrap a <div> rather than a <button> here,
+                        otherwise the <button> will trigger the form to be submitted and create an unwanted empty maker. -->
+                    <input type = "submit" value = "Edit">
+                </div>
+            </form>
+        </div>
     </section>
 {% endblock %}

@@ -70,6 +70,11 @@
 
 
 ## New Updates & Features
+- _**updated on Oct 29, 2018:**_
+    >- Built perfect responsive forms based on the w3schools's guide.
+    >- Updated the Media Query sections, and cut off the redundant codes.
+    >- Made the user authentication button on the header look more like a button.
+
 - _**updated on Oct 26, 2018:**_
     >- Upgraded the web pages to be fully responsive (responsive fonts, logos, photos plus some repositioning features using media queries).
     >- Better to update all forms to be responsive for the next commit.

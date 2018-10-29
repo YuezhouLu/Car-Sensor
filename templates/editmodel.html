@@ -4,21 +4,39 @@
         <div class = "edit-model-title-container">
             <h2>Edit Model -- {{ edited_model.name }}</h2>
         </div>
-        <form action = "{{ url_for('editModel', maker_id = maker_id, model_id = model_id) }}", method = 'POST'>
-            <div class = "edit-model-rename-container">
-                <p class = "edit-model-rename">Model Name:</p>
-                <input type = 'text' size = '20' name = 'model_name' placeholder = '{{ edited_model.name }}'>
-            </div>
-            <div class = "edit-model-description-container">
-                <p class = "edit-model-description">Model Description:</p>
-                <input type = 'text' size = '50' name = 'model_description' placeholder = '{{ edited_model.description }}'>
-            </div>
-            <div class = "edit-model-photo-container">
-                <p class = "edit-model-photo">Model Photo:</p>
-                <input type = 'url' maxlength = '250' name = 'model_photo' placeholder = '{{ edited_model.photo }}'>
-            </div>
-            <input type = 'submit' value = 'Edit'>
-            <a href = "{{ url_for('showModels', maker_id = maker_id) }}">Cancel</a>
-        </form>
+        <div class = "form-container">
+            <form action = "{{ url_for('editModel', maker_id = maker_id, model_id = model_id) }}", method = 'POST'>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "mname" class = "label-name" >Model Name:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <input type = 'text' id = 'mname' size = '20' name = 'model_name' placeholder = '{{ edited_model.name }}'>
+                    </div>    
+                </div>
+                <div class = "form-row">
+                    <div class = "form-col-25">
+                        <label for = "modeldes" class = "label-name">Model Description:</label>
+                    </div>
+                    <div class = "form-col-75">
+                        <textarea id = 'modeldes' name = 'model_description' placeholder = '{{ edited_model.description }}' style = 'height: 200px'></textarea>
+                    </div>
+                </div>
+                <div class = "form-row">
+                        <div class = "form-col-25">
+                            <label for = "mphoto" class = "label-name">Model Photo:</label>
+                        </div>
+                        <div class = "form-col-75">
+                            <input type = 'url' id = 'mphoto' maxlength = '250' name = 'model_photo' placeholder = '{{ edited_model.photo }}'>
+                        </div>
+                    </div>
+                <div class = "form-row">
+                    <a href = "{{ url_for('showModels', maker_id = maker_id) }}"><div class = "cancel-button">Cancel</div></a>
+                    <!-- Need to use <a> tag wrap a <div> rather than a <button> here,
+                        otherwise the <button> will trigger the form to be submitted and create an unwanted empty maker. -->
+                    <input type = "submit" value = "Edit">
+                </div>
+            </form>
+        </div>
     </section>
 {% endblock %}
