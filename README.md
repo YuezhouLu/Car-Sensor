@@ -4,12 +4,12 @@
 
 
 ## Project Overview
-  To develop an application that provides a list of items within a variety of categories as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.
+To develop an application that provides a list of items within a variety of categories as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.
 
 
 ## Why This Project?
-  Modern web applications perform a variety of functions and provide amazing features and utilities to their users; but deep down, it’s really all just creating, reading, updating and deleting data. In this project, you’ll combine your knowledge of building dynamic websites with persistent data storage to create a web application that provides a compelling service to your users.
-
+Modern web applications perform a variety of functions and provide amazing features and utilities to their users; but deep down, it’s really all just creating, reading, updating and deleting data. In this project, we’ll combine our knowledge of building dynamic websites with persistent data storage to create a web application that provides a compelling service to our users. Efficiently interacting with data is the backbone upon which performant web applications are built. Properly implementing authentication mechanisms and appropriately mapping HTTP methods to CRUD operations are core features of a properly secured web application.
+    
 
 ## Skills Honed
 + Developing a RESTful web application utilizing:
@@ -18,12 +18,12 @@
     3. HTML
     4. CSS
     5. OAuth 2.0
-+ Implementing CRUD (create, read, update and delete) operations.
-+ Implementing third-party OAuth authentication.
++ Learnt when to properly use the various HTTP methods available and how these methods relate to CRUD (create, read, update and delete) operations.
++ Implementing third-party OAuth authentication by using Google and Facebook Sign in.
 
 
 ## Files in this Repo
-  This project has one main Python module _**app.py**_ which runs the entire Flask application. A SQL database called _**mygarage.db**_ is created using the _**database_setup.py**_ module and you can populate the database with test data by running _**lotsofcars.py**_. All front-end HTML templates of this Flask application are stored in the _**templates**_ folder, and CSS file is stored in the _**static**_ directory.
+This project has one main Python module _**app.py**_ which runs the entire Flask application. A SQL database called _**mygarage.db**_ is created using the _**database_setup.py**_ module and you can populate the database with test data by running _**lotsofcars.py**_. All front-end HTML templates of this Flask application are stored in the _**templates**_ folder, and CSS file is stored in the _**static**_ directory.
 
 
 ## How to Run?
@@ -60,7 +60,7 @@
 
 
 ## Public JSON Endpoints
-#### The following JSON API Endpoints are open to the public:
+### The following JSON API Endpoints are open to the public:
 * Returns all makers' information in JSON format:  
     ```/garage/JSON```
 * Returns info of all models of a specific maker in JSON format:  
@@ -70,6 +70,9 @@
 
 
 ## New Updates & Features
+- _**updated on Feb 25, 2019:**_
+    >- Updated this REAME.md file.
+
 - _**updated on Oct 29, 2018:**_
     >- Built perfect responsive forms based on the w3schools's guide.
     >- Updated the Media Query sections, and cut off the redundant codes.
